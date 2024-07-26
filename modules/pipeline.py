@@ -18,7 +18,6 @@ from sklearn.svm import SVC
 
 # Укажем путь к файлам проекта:
 # -> $PROJECT_PATH при запуске в Airflow
-path = os.path.expanduser('~/airflow_hw/plugins')
 # -> иначе - текущая директория при локальном запуске
 path = os.environ.get('PROJECT_PATH', '.')
 
@@ -133,4 +132,3 @@ def pipeline() -> None:
 
 if __name__ == '__main__':
     pipeline()
-

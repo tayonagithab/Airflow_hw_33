@@ -14,9 +14,15 @@ from sklearn.preprocessing import FunctionTransformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+from sklearn import datasets
+
+def my_function():
+    iris = datasets.load_iris()
+    print(iris.data)
 
 # Укажем путь к файлам проекта:
 # -> $PROJECT_PATH при запуске в Airflow
+
 # -> иначе - текущая директория при локальном запуске
 path = os.environ.get('PROJECT_PATH', '..')
 

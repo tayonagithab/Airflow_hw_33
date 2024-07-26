@@ -7,10 +7,7 @@ import dill
 import pandas as pd
 
 # Добавим путь к коду проекта в переменную окружения, чтобы он был доступен python-процессу
-path = os.path.expanduser('~/airflow_hw')
-os.environ['PROJECT_PATH'] = path
-# Добавим путь к коду проекта в $PATH, чтобы импортировать функции
-sys.path.insert(0, path)
+path = os.environ.get('PROJECT_PATH', '.')
 
 def predict():
     model_path = f'{path}/data/models'
